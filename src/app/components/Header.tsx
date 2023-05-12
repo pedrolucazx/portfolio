@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 
 type Props = {};
@@ -34,6 +35,7 @@ export default function Header({}: Props) {
           bgColor="transparent"
         />
       </motion.div>
+
       <motion.div
         initial={{
           x: 500,
@@ -56,7 +58,9 @@ export default function Header({}: Props) {
           fgColor="gray"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm">contato</p>
+        <a href="#contact">
+          <p className="uppercase hidden md:inline-flex text-sm">contato</p>
+        </a>
       </motion.div>
     </header>
   );

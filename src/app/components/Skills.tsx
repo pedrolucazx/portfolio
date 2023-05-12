@@ -5,6 +5,26 @@ import Skill from "./Skill";
 type Props = {};
 
 export default function Skills({}: Props) {
+  const skills = [
+    "html",
+    "css",
+    "js",
+    "ts",
+    "react",
+    "nextjs",
+    "nodejs",
+    "jest",
+    "materialui",
+    "tailwind",
+    "mongodb",
+    "postgres",
+    "prisma",
+    "sequelize",
+    "docker",
+    "ruby",
+    "rails",
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,14 +37,10 @@ export default function Skills({}: Props) {
         Skills
       </h3>
 
-      <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+      <div className="grid grid-cols-5 gap-2">
+        {skills.map((skill, index) => (
+          <Skill key={index} img={`https://skillicons.dev/icons?i=${skill}`} />
+        ))}
       </div>
     </motion.div>
   );
